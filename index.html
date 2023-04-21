@@ -3,58 +3,75 @@
   <head>
     <title>Pizza King</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#">Acasă</a></li>
-        <li><a href="#menu">Meniu</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
     <header>
-      <h1>Pizza King</h1>
-      <p>Ce fel de pizza îți dorești astăzi?</p>
+      <div class="container">
+        <h1>Pizza King</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Acasa</a></li>
+            <li><a href="#menu">Meniu</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
+    <section id="home">
+      <div class="container">
+        <h2>Bun venit la Pizza King!</h2>
+        <p>Suntem o pizzerie dedicata oferirii celor mai bune pizza din oras.</p>
+        <img src="pizza.jpg" alt="Pizza">
+      </div>
+    </section>
+
     <section id="menu">
       <div class="container">
         <h2>Meniu</h2>
-        <div class="menu-item">
-          <img src="https://www.example.com/pizza-margherita.jpg" alt="Pizza Margherita">
-          <h3>Pizza Margherita</h3>
-          <p>Blat subțire, sos de roșii, mozzarella, roșii și busuioc</p>
-          <div class="price">
-            <p>20cm - 22 RON</p>
-            <p>40cm - 35 RON</p>
-          </div>
-        </div>
-        <div class="menu-item">
-          <img src="https://www.example.com/pizza-capricciosa.jpg" alt="Pizza Capricciosa">
-          <h3>Pizza Capricciosa</h3>
-          <p>Blat subțire, sos de roșii, mozzarella, șuncă, ciuperci, măsline și anșoa</p>
-          <div class="price">
-            <p>20cm - 28 RON</p>
-            <p>40cm - 43 RON</p>
-          </div>
-        </div>
-        <div class="menu-item">
-          <img src="https://www.example.com/pizza-vegetariana.jpg" alt="Pizza Vegetariana">
-          <h3>Pizza Vegetariana</h3>
-          <p>Blat subțire, sos de roșii, mozzarella, ardei gras, ceapă roșie, ciuperci și măsline</p>
-          <div class="price">
-            <p>20cm - 25 RON</p>
-            <p>40cm - 38 RON</p>
-          </div>
-        </div>
+        <ul>
+          <li>
+            <img src="pizza1.jpg" alt="Pizza 1" id="pizza1">
+            <div class="pizza-details">
+              <h3>Margherita</h3>
+              <p>Mozzarella, sos de rosii, busuioc</p>
+              <p class="sizes">Marimi: 20 cm (15 RON), 40 cm (25 RON)</p>
+            </div>
+          </li>
+          <li>
+            <img src="pizza2.jpg" alt="Pizza 2" id="pizza2">
+            <div class="pizza-details">
+              <h3>Quattro Formaggi</h3>
+              <p>Mozzarella, gorgonzola, parmezan, pecorino</p>
+              <p class="sizes">Marimi: 20 cm (20 RON), 40 cm (35 RON)</p>
+            </div>
+          </li>
+          <li>
+            <img src="pizza3.jpg" alt="Pizza 3" id="pizza3">
+            <div class="pizza-details">
+              <h3>Capricciosa</h3>
+              <p>Mozzarella, sos de rosii, sunca, ciuperci, masline</p>
+              <p class="sizes">Marimi: 20 cm (18 RON), 40 cm (30 RON)</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
+
     <section id="contact">
       <div class="container">
         <h2>Contact</h2>
-        <div class="contact-info">
-          <p><i class="fas fa-map-marker-alt"></i> Adresa: Strada Pizza King nr. 123, București</p>
-          <p><i class="fas fa-phone"></i> Telefon: 0720 123 456</p>
-          <p><i class="fas fa-envelope"></i> Email: contact@pizzaking.ro</p>
-        </div>
-        <form action="submit-form.php" method="POST">
+        <p>Pentru orice intrebari sau comenzi, va rugam sa ne contactati:</p>
+        <ul>
+          <li>Adresa: Strada Pizza nr. 1, Bucuresti</li>
+          <li>Telefon: 0777 123 456</li>
+          <li>Email: contact@pizzaking.ro</li>
+        </ul>
+      </div>
+    </section>
+
+    <script>
+      // Selectam imaginile pizzelor
+      var pizza1 = document.getElementById("pizza1");
+      var pizza2 = document.getElementById("pizza2");
+      var pizza3 = document.getElementById("pizza3");
