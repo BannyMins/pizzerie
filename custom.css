@@ -1,170 +1,143 @@
-/* Stiluri generale */
-
 body {
+  background-color: #f2f2f2;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
 }
 
-a {
-  color: #4CAF50;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Stiluri pentru antet */
-
-header {
-  background-color: #3F51B5;
-  color: white;
-  padding: 20px;
-}
-
-header h1 {
-  margin: 0;
-}
-
-/* Stiluri pentru meniu */
-
-nav {
-  background-color: #f2f2f2;
-  padding: 10px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+/* Header */
+.header {
+  background-color: #2e3192;
+  color: #fff;
   display: flex;
   justify-content: space-between;
+  padding: 10px 20px;
 }
 
-nav ul li {
-  margin: 0 10px;
+.header h1 {
+  font-size: 40px;
+  margin: 0;
 }
 
-nav ul li a {
-  font-weight: bold;
-  text-transform: uppercase;
+.header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 20px;
 }
 
-nav ul li a:hover {
-  color: #3F51B5;
+/* Home section */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  background-image: url("https://i.imgur.com/XggszZG.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/* Stiluri pentru sectiunea principala */
+.home h2 {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 30px;
+}
 
-main {
+.home p {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  max-width: 800px;
+}
+
+/* Menu section */
+.menu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
 }
 
-article {
-  background-color: #f2f2f2;
-  margin: 10px;
-  width: 30%;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-article img {
-  width: 100%;
-  height: auto;
-}
-
-article h2 {
-  margin-top: 0;
-}
-
-article p {
-  font-size: 0.9em;
-}
-
-article button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 5px;
+.menu-item {
+  width: 300px;
+  margin: 20px;
+  border: 2px solid #2e3192;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
   cursor: pointer;
-  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
-article button:hover {
-  background-color: #3F51B5;
+.menu-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Stiluri pentru secțiunea de contact */
-
-section {
-  background-color: #3F51B5;
-  color: white;
-  padding: 20px;
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-section h2 {
+.menu-item .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-item:hover .details {
+  transform: translateY(0);
+}
+
+.menu-item .details h3 {
+  font-size: 30px;
   margin: 0;
 }
 
-section p {
-  margin-top: 10px;
-  font-size: 0.9em;
+.menu-item .details p {
+  font-size: 20px;
+  margin: 10px 0 0 0;
 }
 
-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-section ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-section ul li:before {
-  content: "\2022";
-  color: #4CAF50;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
-.contact-form {
+.menu-item .details a {
+  background-color: #fff;
+  color: #2e3192;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
   margin-top: 20px;
+}
+
+/* Contact section */
+.contact {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  background-color: #fff;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: none;
+.contact h2 {
+  font-size: 50px;
+  color: #2e3192;
+  margin-bottom: 30px;
 }
 
-.contact-form input[type="submit"] {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact
+.contact p {
+  font-size: 25px;
+  color: #2e319
